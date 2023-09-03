@@ -14,9 +14,9 @@ const Product = Loadable(lazy(() => import('views/Product')));
 const AdminRoutes = {
     path: '/',
     element: (
-        <AuthGuard>
-            <MainLayout />
-        </AuthGuard>
+        // <AuthGuard>
+        <MainLayout />
+        // </AuthGuard>
     ),
     children: [
         {
