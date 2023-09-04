@@ -68,6 +68,13 @@ const admin = {
             type: 'item',
             url: '/block',
             icon: icons.IconSquare
+        },
+        {
+            id: 'post',
+            title: 'Post',
+            type: 'item',
+            url: '/post',
+            icon: icons.IconFileDiff
         }
     ]
 };

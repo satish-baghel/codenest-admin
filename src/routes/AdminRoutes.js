@@ -23,6 +23,10 @@ const SubCategoryListing = Loadable(lazy(() => import('views/SubCategory/SubCate
 
 // Block
 const BlockListing = Loadable(lazy(() => import('views/Block/Block')));
+
+// Post
+const PostListing = Loadable(lazy(() => import('views/Post/Post')));
+const PostForm = Loadable(lazy(() => import('views/Post/Form')));
 // ==============================|| MAIN ROUTING ||============================== //
 
 const AdminRoutes = {
@@ -68,6 +72,14 @@ const AdminRoutes = {
         {
             path: '/block',
             element: <BlockListing />
+        },
+        {
+            path: '/post',
+            element: <PostListing />
+        },
+        {
+            path: '/post/create',
+            element: <PostForm />
         },
         {
             path: '*',
