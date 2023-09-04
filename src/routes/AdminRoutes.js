@@ -9,27 +9,69 @@ import AuthGuard from 'utils/route-guard/AuthGuard';
 const SamplePage = Loadable(lazy(() => import('views/sample-page')));
 const Product = Loadable(lazy(() => import('views/Product')));
 
+// Subscriber Listing
+const SubscriberListing = Loadable(lazy(() => import('views/Subscriber/Subscriber')));
+
+// Tag
+const TagListing = Loadable(lazy(() => import('views/Tag/Tag')));
+
+// Category
+const CategoryListing = Loadable(lazy(() => import('views/Category/Category')));
+
+// Sub Category
+const SubCategoryListing = Loadable(lazy(() => import('views/SubCategory/SubCategory')));
+
+// Block
+const BlockListing = Loadable(lazy(() => import('views/Block/Block')));
 // ==============================|| MAIN ROUTING ||============================== //
 
 const AdminRoutes = {
     path: '/',
     element: (
-        <AuthGuard>
-            <MainLayout />
-        </AuthGuard>
+        // <AuthGuard>
+        <MainLayout />
+        // </AuthGuard>
     ),
     children: [
         {
-            path: '/admin/users',
+            path: '/dashboard',
             element: <SamplePage />
         },
         {
-            path: '/admin/product',
+            path: '/users',
+            element: <SamplePage />
+        },
+        {
+            path: '/product',
             element: <Product />
         },
         {
+            path: '/product',
+            element: <Product />
+        },
+        {
+            path: '/subscriber',
+            element: <SubscriberListing />
+        },
+        {
+            path: '/tag',
+            element: <TagListing />
+        },
+        {
+            path: '/category',
+            element: <CategoryListing />
+        },
+        {
+            path: '/sub-category',
+            element: <SubCategoryListing />
+        },
+        {
+            path: '/block',
+            element: <BlockListing />
+        },
+        {
             path: '*',
-            element: <Navigate to="/admin/users" />
+            element: <Navigate to="/dashboard" />
         }
     ]
 };
