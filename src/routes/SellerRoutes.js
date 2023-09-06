@@ -13,9 +13,9 @@ const SamplePage = Loadable(lazy(() => import('views/sample-page')));
 const Seller = {
     path: '/',
     element: (
-        <AuthGuard>
-            <MainLayout />
-        </AuthGuard>
+        // <AuthGuard>
+        <MainLayout />
+        // </AuthGuard>
     ),
     children: [
         {

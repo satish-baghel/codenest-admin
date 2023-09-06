@@ -69,6 +69,7 @@ const MainLayout = () => {
     const navigate = useNavigate();
 
     const menuList = navigation();
+    console.log('🚀 ~ file: index.js:72 ~ MainLayout ~ menuList:', menuList);
     const location = useLocation();
     const matchDownMd = useMediaQuery(theme.breakpoints.down('lg'));
 
