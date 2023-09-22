@@ -20,6 +20,10 @@ const tagList = [
     {
         value: 'ul',
         label: 'List'
+    },
+    {
+        value: 'code',
+        label: 'Code'
     }
 ];
 const DescriptionForm = ({ handleBack, setErrorIndex }) => {
@@ -83,6 +87,12 @@ const DescriptionForm = ({ handleBack, setErrorIndex }) => {
 
                             return l;
                         })
+                    };
+                }
+                if (tagName === 'code') {
+                    return {
+                        ...obj,
+                        text: v
                     };
                 }
                 return {

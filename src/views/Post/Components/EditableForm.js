@@ -3,12 +3,14 @@ import { Button, Card, Grid, TextField } from '@mui/material';
 import { IconTrash } from '@tabler/icons';
 import { useRef } from 'react';
 import ContentEditable from 'react-contenteditable';
+import CodeEditor from './CodeEditor';
 
 //
 const EditableForm = ({ data, onChange, index, onChangeFile, addMoreList }) => {
+    console.log('🚀 ~ file: EditableForm.js:10 ~ EditableForm ~ data:', data);
     const contentEditable = useRef();
 
-    if (!['list', 'img'].includes(data.tagName)) {
+    if (!['list', 'img', 'ul', 'code'].includes(data.tagName)) {
         return (
             <>
                 <Grid item xs={11} sm={11}>
@@ -92,6 +94,9 @@ const EditableForm = ({ data, onChange, index, onChangeFile, addMoreList }) => {
                     : null}
             </>
         );
+    }
+    if (['code'].includes(data.tagName)) {
+        return <CodeEditor onChange={(e) => onChange(e, index, data.tagName)} value={data?.text} />;
     }
     return null;
 };
