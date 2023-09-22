@@ -26,7 +26,7 @@ const tagList = [
         label: 'Code'
     }
 ];
-const DescriptionForm = ({ handleBack, setErrorIndex }) => {
+const DescriptionForm = () => {
     const [tagName, setTagName] = useState('');
 
     const [blocks, setBlocks] = useState([
@@ -161,12 +161,9 @@ const DescriptionForm = ({ handleBack, setErrorIndex }) => {
             </Grid>
             <Grid item xs={12}>
                 <Stack direction="row" justifyContent="space-between">
-                    <Button onClick={handleBack} sx={{ my: 3, ml: 1 }}>
-                        Back
-                    </Button>
                     <AnimateButton>
-                        <Button variant="contained" type="submit" sx={{ my: 3, ml: 1 }} onClick={() => setErrorIndex(1)}>
-                            Next
+                        <Button variant="contained" type="submit" sx={{ my: 3, ml: 1 }}>
+                            Save
                         </Button>
                     </AnimateButton>
                 </Stack>

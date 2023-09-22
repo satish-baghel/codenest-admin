@@ -1,7 +1,7 @@
 import Editor from '@monaco-editor/react';
 
 const CodeEditorWindow = (props) => (
-    <div className="overlay rounded-md overflow-hidden w-full h-full shadow-4xl">
+    <div>
         <Editor
             height="90vh"
             width="100vh"

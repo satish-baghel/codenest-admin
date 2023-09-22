@@ -1,7 +1,6 @@
-import { Button, FormControl, Grid, InputLabel, MenuItem, Select, Stack, TextField, Typography } from '@mui/material';
-import AnimateButton from 'ui-component/extended/AnimateButton';
+import { FormControl, Grid, InputLabel, MenuItem, Select, TextField, Typography } from '@mui/material';
 
-const PostForm = ({ shippingData, setShippingData, handleNext, setErrorIndex }) => {
+const PostForm = () => {
     console.log('first');
     return (
         <div>
@@ -42,15 +41,6 @@ const PostForm = ({ shippingData, setShippingData, handleNext, setErrorIndex }) 
                         </Select>
                     </FormControl>
                 </Grid>
-            </Grid>
-            <Grid item xs={12}>
-                <Stack direction="row" justifyContent="flex-end">
-                    <AnimateButton>
-                        <Button variant="contained" sx={{ my: 3, ml: 1 }} type="submit" onClick={() => handleNext(0)}>
-                            Next
-                        </Button>
-                    </AnimateButton>
-                </Stack>
             </Grid>
         </div>
     );
